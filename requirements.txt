@@ -8,6 +8,9 @@ sphinx-book-theme
 # Module pour améliorer l'interface html
 sphinx-design
 
+# Module sphinx-favicon
+sphinx-favicon
+
 # Module pour auto-construire la doc
 sphinx-autobuild
 
