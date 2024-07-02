@@ -1,0 +1,90 @@
+:root{
+    --color-blue:#284487;
+    --color-blue-light:#adc5d9;
+    --color-gray:#d4d4d4;
+    --color-gray-light:#eee;
+    --color-gray-dark:#4d4d4d;
+    --color-orange:#ff5500;
+    --color-vert-imperial:#00561b;
+    --color-vert-foret:#228b22;
+    --color-vert-anglais:#18391e;
+}
+
+.pyscript-editeur{
+    border-left: solid 6px var(--color-orange);
+    border-right: solid 6px var(--color-orange);
+    border-top: solid 1px var(--color-orange);
+    border-bottom: solid 1px var(--color-orange);
+    border-radius: 6px
+}
+.pyscript-foot{
+    background:#ccc;
+    color: #000;
+    padding:4px 8px;
+    height:30px;
+    margin-top:0px;
+}
+
+.pyscript-output{
+    background:#fff;
+    color: #000;
+    padding:4px 8px;
+    border-top: solid 1px #ccc;
+    min-height:40px;
+    margin:0px;
+}
+html[data-theme=dark] div.pyscript-output{
+    background:#fff;
+    color: #000;
+}
+.pyscript-button{
+    margin: 0px auto;
+    text-align:center;
+    background:#ccc;
+}
+
+div.pyscript-container button{
+    background: var(--color-vert-foret);
+    padding:2px 8px;
+    border:solid 2px var(--color-vert-anglais);
+    border-radius:4px;
+    color:#fff;
+    margin: 8px auto;
+}
+
+div.pyscript-logo {
+    text-align: left;
+    display:inline-block;
+    width:24px;
+}
+h3.pyscript-title{
+    margin: 0px;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 0px;
+}
+
+div.pyscript-output span.success {
+    color: green;
+}
+
+div.pyscript-output span.assertion-error {
+    color: purple;
+}
+
+div.pyscript-output span.error {
+    color: red;
+}
+
+div.pyscript-output span.warning {
+    color: orange;
+}
+
+div.pyscript-output span.result {
+    color: green;
+}
+
+.line {
+    font-family: monospace;
+}
+

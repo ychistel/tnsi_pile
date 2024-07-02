@@ -1,0 +1,14 @@
+<div class="sidebar-primary-item">
+    <nav class="bd-links bd-docs-nav" aria-label="Main">
+    <h4>Liens vers sites</h4>
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+            {% for item in sites %}
+            <li class="toctree-l1">
+                <a class="reference internal" href="{{ sites[item] }}">{{ item }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    </nav>
+</div>
