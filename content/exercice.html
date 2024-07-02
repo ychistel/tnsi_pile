@@ -53,7 +53,8 @@
     <link rel="canonical" href="https://ychistel.github.io/content/exercice.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="prev" title="Cours" href="pile.html" />
+    <link rel="next" title="TP : Ponctuation" href="ponctuation.html" />
+    <link rel="prev" title="Structure de pile" href="pile.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="fr"/>
   </head>
@@ -189,9 +190,10 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="ponctuation.html">Activité</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pile.html">Cours</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pile.html">Structure de pile</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Exercices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ponctuation.html">TP : Ponctuation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ep_pr_1.html">Exercice pratique</a></li>
 </ul>
 
     </div>
@@ -366,10 +368,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3">Exercice 3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4">Exercice 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-1">Exercice 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-2">Exercice 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-3">Exercice 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-4">Exercice 4</a></li>
 </ul>
             </nav>
         </div>
@@ -383,27 +385,27 @@ document.write(`
                   
   <section id="exercices">
 <h1>Exercices<a class="headerlink" href="#exercices" title="Lien vers cette rubrique">#</a></h1>
-<p>Pour les exercices ci-dessous, on utilise l’interface de <strong>pile</strong> rappelée ci-dessous:</p>
+<p>On utilise l’interface de la <code class="docutils literal notranslate"><span class="pre">pile</span></code> rappelée ci-dessous:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">creer_pile()</span></code> fonction qui crée une pile vide.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">est_vide(P)</span></code> fonction qui prend en paramètre une pile P et renvoie un booléen permettant de savoir si la pile est vide ou non.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">empiler(P,e)</span></code> fonction qui prend en paramètre une pile P et un élément e et l’ajoute au sommet de la pile.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">depiler(P)</span></code> fonction qui prend en paramètre une pile P et renvoie le sommet de la pile en le supprimant.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">est_vide(P)</span></code> fonction qui prend en paramètre une pile <code class="docutils literal notranslate"><span class="pre">P</span></code> et renvoie un booléen permettant de savoir si la pile est vide ou non.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">empiler(P,e)</span></code> fonction qui prend en paramètre une pile <code class="docutils literal notranslate"><span class="pre">P</span></code> et un élément <code class="docutils literal notranslate"><span class="pre">e</span></code> et l’ajoute au sommet de la pile.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">depiler(P)</span></code> fonction qui prend en paramètre une pile <code class="docutils literal notranslate"><span class="pre">P</span></code> et renvoie le sommet de la pile en le supprimant.</p></li>
 </ul>
-<section id="exercice-1">
-<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien vers cette rubrique">#</a></h2>
-<p>On empile les nombres 17, 9 et 12 dans cet ordre dans une pile vide <strong>P</strong>.</p>
+<section id="section-1">
+<h2>Exercice 1<a class="headerlink" href="#section-1" title="Lien vers cette rubrique">#</a></h2>
+<p>On empile les nombres 17, 9 et 12 dans cet ordre dans une pile vide <code class="docutils literal notranslate"><span class="pre">P</span></code>.</p>
 <ol class="arabic simple">
-<li><p>Quel est le sommet de la pile ?</p></li>
-<li><p>Représenter la pile <strong>P</strong> par un schéma.</p></li>
-<li><p>Écrire, à l’aide des primitives de l’interface, la suite d’instructions qui permet de créer et remplir la pile <strong>P</strong>.</p></li>
-<li><p>On dépile deux fois la pile <strong>P</strong>. Écrire les instructions et donner son contenu.</p></li>
-<li><p>Écrire une instruction qui empile la valeur 31 dans la pile <strong>P</strong>.</p></li>
-<li><p>Écrire un algorithme qui dépile la pile <strong>P</strong> tant qu’elle n’est pas vide.</p></li>
+<li><p>Quel est le sommet de la pile <code class="docutils literal notranslate"><span class="pre">P</span></code> ?</p></li>
+<li><p>Représenter la pile <code class="docutils literal notranslate"><span class="pre">P</span></code> par un schéma.</p></li>
+<li><p>Écrire, à l’aide des primitives de l’interface, la suite d’instructions qui permet de créer et remplir la pile <code class="docutils literal notranslate"><span class="pre">P</span></code>.</p></li>
+<li><p>On dépile deux fois la pile <code class="docutils literal notranslate"><span class="pre">P</span></code>. Écrire les instructions et donner son contenu.</p></li>
+<li><p>Écrire une instruction qui empile la valeur <code class="docutils literal notranslate"><span class="pre">31</span></code> dans la pile <code class="docutils literal notranslate"><span class="pre">P</span></code>.</p></li>
+<li><p>Écrire un algorithme qui dépile la pile <code class="docutils literal notranslate"><span class="pre">P</span></code> tant qu’elle n’est pas vide.</p></li>
 </ol>
 </section>
-<section id="exercice-2">
-<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien vers cette rubrique">#</a></h2>
+<section id="section-2">
+<h2>Exercice 2<a class="headerlink" href="#section-2" title="Lien vers cette rubrique">#</a></h2>
 <ol class="arabic">
 <li><p>On donne les instructions python suivantes. Représenter les différents états de la pile.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">P</span> <span class="o">=</span> <span class="n">creer_pile</span><span class="p">()</span>
@@ -415,23 +417,23 @@ document.write(`
 </pre></div>
 </div>
 </li>
-<li><p>On a représenté les états d’une pile Q:</p>
+<li><p>On a représenté les états d’une pile <code class="docutils literal notranslate"><span class="pre">Q</span></code>:</p>
 <img alt="../_images/pile_Q_ex.svg" class="align-center" src="../_images/pile_Q_ex.svg" /><p>Donner les instructions Python conduisant à ses différents états.</p>
 </li>
 </ol>
 </section>
-<section id="exercice-3">
-<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien vers cette rubrique">#</a></h2>
+<section id="section-3">
+<h2>Exercice 3<a class="headerlink" href="#section-3" title="Lien vers cette rubrique">#</a></h2>
 <p>Écrire la fonction <code class="docutils literal notranslate"><span class="pre">renverse</span></code> qui prend en paramètre une pile et renvoie la pile avec son contenu inversé. On en donne une illustration ci-dessous:</p>
 <img alt="../_images/pile_renverse.svg" class="align-center" src="../_images/pile_renverse.svg" /><p>On utilisera uniquement des structures de piles et rien d’autre.</p>
 </section>
-<section id="exercice-4">
-<h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien vers cette rubrique">#</a></h2>
-<p>Soit P une pile déjà créée et contenant des nombres entiers. La pile peut être vide après exécution des fonctions.</p>
+<section id="section-4">
+<h2>Exercice 4<a class="headerlink" href="#section-4" title="Lien vers cette rubrique">#</a></h2>
+<p>Soit <code class="docutils literal notranslate"><span class="pre">P</span></code> une pile déjà créée et contenant des nombres entiers. La pile peut être vide après exécution des fonctions.</p>
 <ol class="arabic simple">
 <li><p>Écrire la fonction <code class="docutils literal notranslate"><span class="pre">somme</span></code> qui prend en paramètre une pile et renvoie la somme de toutes les valeurs contenues dans la pile. Dans le cas d’une pile vide, la somme renvoyée est nulle.</p></li>
 <li><p>Écrire la fonction <code class="docutils literal notranslate"><span class="pre">hauteur</span></code> qui prend en paramètre une pile et renvoie le nombre d’éléments contenus dans la pile.</p></li>
-<li><p>Modifier les fonctions <code class="docutils literal notranslate"><span class="pre">somme</span></code> et <code class="docutils literal notranslate"><span class="pre">hauteur</span></code> pour que la pile P retrouve son état initial après exécution des fonctions.</p></li>
+<li><p>Modifier les fonctions <code class="docutils literal notranslate"><span class="pre">somme</span></code> et <code class="docutils literal notranslate"><span class="pre">hauteur</span></code> pour que la pile <code class="docutils literal notranslate"><span class="pre">P</span></code> retrouve son état initial après exécution des fonctions.</p></li>
 </ol>
 </section>
 </section>
@@ -453,8 +455,17 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">précédent</p>
-        <p class="prev-next-title">Cours</p>
+        <p class="prev-next-title">Structure de pile</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="ponctuation.html"
+       title="page suivante">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">suivant</p>
+        <p class="prev-next-title">TP : Ponctuation</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -472,10 +483,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3">Exercice 3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4">Exercice 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-1">Exercice 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-2">Exercice 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-3">Exercice 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-4">Exercice 4</a></li>
 </ul>
   </nav></div>
 

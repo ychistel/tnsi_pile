@@ -53,6 +53,7 @@
     <link rel="canonical" href="https://ychistel.github.io/content/ep_pr_1.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="prev" title="TP : Ponctuation" href="ponctuation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="fr"/>
   </head>
@@ -114,8 +115,6 @@
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -189,10 +188,11 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="ponctuation.html">Activité</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pile.html">Cours</a></li>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="pile.html">Structure de pile</a></li>
 <li class="toctree-l1"><a class="reference internal" href="exercice.html">Exercices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ponctuation.html">TP : Ponctuation</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Exercice pratique</a></li>
 </ul>
 
     </div>
@@ -388,47 +388,59 @@ postfixe est déterminée à l’aide d’une pile en parcourant l’expression 
 <p>Dans le cadre de cet exercice, on se limitera aux opérations × et +.</p>
 <p>Pour cet exercice, on dispose d’une classe <code class="docutils literal notranslate"><span class="pre">Pile</span></code> qui implémente les méthodes de base sur la structure de pile.</p>
 <p>Compléter le script de la fonction eval_expression qui reçoit en paramètre une liste python représentant la notation postfixe d’une expression arithmétique et qui renvoie sa valeur associée.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Pile</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Classe definissant une structure de pile.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span> <span class="o">=</span> <span class="p">[]</span>
+<div class="pyscript-container docutils container">
+<div class="pyscript-editeur docutils container">
 
-    <span class="k">def</span> <span class="nf">est_vide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Renvoie le booleen True si la pile est vide, False sinon.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span> <span class="o">==</span> <span class="p">[]</span>
+            <div id="pyscript-editor-0-buttons" class="pyscript-button">
+            <div id="pyscript-editor-0-logo" class="pyscript-logo">
+                <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" alt="Python Logo" class="python-logo"/>
+            </div>
+            <button id="pyscript-editor-0-run-button" onclick="runPyScript('pyscript-editor-0')">Run</button>
+            <button id="pyscript-editor-0-clear-editor-button" onclick="clearEditor('pyscript-editor-0')">Clear Editor</button>
+            <button id="pyscript-editor-0-clear-output-button" onclick="clearOutput('pyscript-editor-0')">Clear Output</button>
+            <button id="pyscript-editor-0-downloadCode-button" onclick="downloadCode('pyscript-editor-0')">Save</button>
+            <button id="pyscript-editor-0-increaseEditorHeight" onclick="increaseEditorHeight('pyscript-editor-0')"> Lines + </button>
+            <button id="pyscript-editor-0-decreaseEditorHeight" onclick="decreaseEditorHeight('pyscript-editor-0')"> Lines - </button>
+            </div>
+        <textarea id="pyscript-editor-0" class="pyscript-editor" style="height: 40px;">class Pile:
+    """
+    Classe definissant une structure de pile.
+    """
+    def __init__(self):
+        self.contenu = []
 
-    <span class="k">def</span> <span class="nf">empiler</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Place l&#39;element v au sommet de la pile</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+    def est_vide(self):
+        """
+        Renvoie le booleen True si la pile est vide, False sinon.
+        """
+        return self.contenu == []
 
-    <span class="k">def</span> <span class="nf">depiler</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Retire et renvoie l&#39;element place au sommet de la pile,</span>
-<span class="sd">        si la pile n&#39;est pas vide.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+    def empiler(self, v):
+        """
+        Place l'element v au sommet de la pile
+        """
+        self.contenu.append(v)
 
+    def depiler(self):
+        """
+        Retire et renvoie l'element place au sommet de la pile,
+        si la pile n'est pas vide.
+        """
+        if not self.est_vide():
+            return self.contenu.pop()
 
-<span class="k">def</span> <span class="nf">eval_expression</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
-    <span class="n">p</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
-    <span class="k">for</span> <span class="o">...</span> <span class="ow">in</span> <span class="n">tab</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">element</span> <span class="o">!=</span> <span class="s1">&#39;+&#39;</span> <span class="o">...</span> <span class="n">element</span> <span class="o">!=</span> <span class="s1">&#39;*&#39;</span><span class="p">:</span>
-            <span class="n">p</span><span class="o">.</span><span class="n">empiler</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">element</span> <span class="o">==</span> <span class="o">...</span><span class="p">:</span>
-                <span class="n">resultat</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">depiler</span><span class="p">()</span> <span class="o">+</span> <span class="o">...</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="n">resultat</span> <span class="o">=</span> <span class="o">...</span>
-            <span class="n">p</span><span class="o">.</span><span class="n">empiler</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
-    <span class="k">return</span> <span class="o">...</span>
-</pre></div>
+def eval_expression(tab):
+    p = Pile()
+    for ... in tab:
+        if element != '+' ... element != '*':
+            p.empiler(...)
+        else:
+            if element == ...:
+                resultat = p.depiler() + ...
+            else:
+                resultat = ...
+            p.empiler(...)
+    return ...</textarea><div id="pyscript-editor-0-output" class="pyscript-output"></div><div id="pyscript-editor-0-foot" class="pyscript-foot"></div></div>
 </div>
 </section>
 
@@ -443,6 +455,15 @@ postfixe est déterminée à l’aide d’une pile en parcourant l’expression 
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="ponctuation.html"
+       title="page précédente">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">précédent</p>
+        <p class="prev-next-title">TP : Ponctuation</p>
+      </div>
+    </a>
 </div>
                 </footer>
               

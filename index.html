@@ -53,7 +53,7 @@
     <link rel="canonical" href="https://ychistel.github.io/index.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="next" title="Activité" href="content/ponctuation.html" />
+    <link rel="next" title="Structure de pile" href="content/pile.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="fr"/>
   </head>
@@ -191,9 +191,10 @@
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="content/ponctuation.html">Activité</a></li>
-<li class="toctree-l1"><a class="reference internal" href="content/pile.html">Cours</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/pile.html">Structure de pile</a></li>
 <li class="toctree-l1"><a class="reference internal" href="content/exercice.html">Exercices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/ponctuation.html">TP : Ponctuation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/ep_pr_1.html">Exercice pratique</a></li>
 </ul>
 
     </div>
@@ -345,7 +346,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -361,6 +364,15 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contenu </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contenus">Contenus</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capacites-attendues">Capacités attendues</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -372,15 +384,25 @@ document.write(`
                   
   <section id="les-piles">
 <h1>Les piles<a class="headerlink" href="#les-piles" title="Lien vers cette rubrique">#</a></h1>
-<p>La <strong>pile</strong> est une structure de donnée qui mémorise des valeurs mais ne permet l’accès qu’à la dernière valeur ajoutée dans la pile. Cette dernière valeur, une fois retirée permet alors l’accès à la valeur suivante et ainsi de suite.</p>
-<p>La <strong>pile</strong> n’existe pas en Python mais on peut y remédier assez facilement.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="content/ponctuation.html">Activité</a></li>
-<li class="toctree-l1"><a class="reference internal" href="content/pile.html">Cours</a></li>
-<li class="toctree-l1"><a class="reference internal" href="content/exercice.html">Exercices</a></li>
+<section id="contenus">
+<h2>Contenus<a class="headerlink" href="#contenus" title="Lien vers cette rubrique">#</a></h2>
+<ul class="simple">
+<li><p>Structures de données, interface et implémentation.</p></li>
+<li><p>Pile : structure linéaire.</p></li>
 </ul>
+</section>
+<section id="capacites-attendues">
+<h2>Capacités attendues<a class="headerlink" href="#capacites-attendues" title="Lien vers cette rubrique">#</a></h2>
+<ul class="simple">
+<li><p>Spécifier une structure de données par son interface.</p></li>
+<li><p>Distinguer interface et implémentation</p></li>
+<li><p>Écrire plusieurs implémentations d’une même structure de données.</p></li>
+<li><p>Distinguer des structures par le jeu des méthodes qui les caractérisent.</p></li>
+<li><p>Choisir une structure de données adaptées à la situation à modéliser.</p></li>
+</ul>
+<div class="toctree-wrapper compound">
 </div>
+</section>
 </section>
 
 
@@ -395,11 +417,11 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="right-next"
-       href="content/ponctuation.html"
+       href="content/pile.html"
        title="page suivante">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">suivant</p>
-        <p class="prev-next-title">Activité</p>
+        <p class="prev-next-title">Structure de pile</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -409,6 +431,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenu
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contenus">Contenus</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capacites-attendues">Capacités attendues</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

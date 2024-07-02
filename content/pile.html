@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="../_static/img/favicon-16x16.png" sizes="16x16" rel="icon" type="image/png">
     <link href="../_static/img/favicon-32x32.png" sizes="32x32" rel="icon" type="image/png">
-    <title>Cours &#8212; Documentation Documentation Sphinx </title>
+    <title>Structure de pile &#8212; Documentation Documentation Sphinx </title>
   
   
   
@@ -54,7 +54,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Exercices" href="exercice.html" />
-    <link rel="prev" title="Activité" href="ponctuation.html" />
+    <link rel="prev" title="Les piles" href="../index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="fr"/>
   </head>
@@ -190,9 +190,10 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="ponctuation.html">Activité</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Cours</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Structure de pile</a></li>
 <li class="toctree-l1"><a class="reference internal" href="exercice.html">Exercices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ponctuation.html">TP : Ponctuation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ep_pr_1.html">Exercice pratique</a></li>
 </ul>
 
     </div>
@@ -357,7 +358,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Cours</h1>
+    <h1>Structure de pile</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -380,17 +381,17 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="cours">
-<h1>Cours<a class="headerlink" href="#cours" title="Lien vers cette rubrique">#</a></h1>
+  <section id="structure-de-pile">
+<h1>Structure de pile<a class="headerlink" href="#structure-de-pile" title="Lien vers cette rubrique">#</a></h1>
 <p>Une <strong>pile</strong> est une <strong>structure de données linéaire</strong>.</p>
 <ul class="simple">
-<li><p>on accède uniquement au dernier élément ajouté; c’est le <strong>sommet de la pile</strong>;</p></li>
+<li><p>on accède uniquement au dernier élément ajouté; c’est le <strong>sommet de la pile</strong>.</p></li>
 <li><p>tout nouvel élément est ajouté au sommet de la pile.</p></li>
 </ul>
 <p>Cette structure de donnée est dite <strong>LIFO</strong> pour <strong>Last In First Out</strong> (dernier arrivé, premier sorti).</p>
 <p>On représente souvent une pile de façon verticale comme une pile d’assiettes.</p>
 <img alt="../_images/pile.svg" class="align-center" src="../_images/pile.svg" /><p>Pour accéder à un élément situé dans la pile, il est nécessaire de dépiler jusqu’à ce que l’élément voulu soit le sommet de la pile.</p>
-<p>Tous les éléments dépilés sont perdus sauf si on les sauvegarde dans une structure de donnée adaptée (liste ou autre pile).</p>
+<p>Tous les éléments dépilés sont perdus sauf si on les sauvegarde dans une structure de donnée adaptée comme un tableau ou une autre pile.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>La <strong>pile</strong> est utile dans différents types de problèmes:</p>
@@ -412,13 +413,13 @@ document.write(`
 </section>
 <section id="implementation-d-une-pile">
 <h2>Implémentation d’une pile<a class="headerlink" href="#implementation-d-une-pile" title="Lien vers cette rubrique">#</a></h2>
-<p><strong>L’implémentation</strong> d’une pile peut se réaliser de différentes manières en Python. La pile n’existe pas nativement dans ce langage. Par contre, quelle que soit l’implémentation choisie,
-l’interface reste la seule définition de cette structure.</p>
+<p>La structure de pile n’existe pas nativement dans le langage Python. Il faut écrire des fonctions qui réalisent l’interfac d’une pile. C’est ce qu’on appelle une <strong>implémentation</strong>.</p>
+<p>L’implémentation d’une pile peut se réaliser de différentes manières en Python. Par contre, quelle que soit l’implémentation choisie, l’interface reste la seule définition de cette structure.</p>
 <p>Les <strong>listes</strong> de python disposent de fonctions et de méthodes pour réaliser facilement l’interface d’une pile.</p>
 <ul class="simple">
-<li><p>La création d’une pile se fait avec une liste vide;</p></li>
-<li><p>Empiler une valeur se fait avec la méthode <strong>append</strong>;</p></li>
-<li><p>Dépiler une pile se fait avec la méthode <strong>pop</strong></p></li>
+<li><p>La création d’une pile se fait en créant une liste vide;</p></li>
+<li><p>Empiler une valeur se fait avec la méthode <code class="docutils literal notranslate"><span class="pre">append</span></code>;</p></li>
+<li><p>Dépiler une pile se fait avec la méthode <code class="docutils literal notranslate"><span class="pre">pop</span></code>;</p></li>
 <li><p>Tester une pile vide se fait avec un test sur une liste vide.</p></li>
 </ul>
 <div class="pyscript-container docutils container">
@@ -437,9 +438,26 @@ l’interface reste la seule définition de cette structure.</p>
             <button id="pyscript-editor-0-increaseEditorHeight" onclick="increaseEditorHeight('pyscript-editor-0')"> Lines + </button>
             <button id="pyscript-editor-0-decreaseEditorHeight" onclick="decreaseEditorHeight('pyscript-editor-0')"> Lines - </button>
             </div>
-        <textarea id="pyscript-editor-0" class="pyscript-editor" style="height: 40px;"></textarea><div id="pyscript-editor-0-output" class="pyscript-output"></div><div id="pyscript-editor-0-foot" class="pyscript-foot"></div></div>
+        <textarea id="pyscript-editor-0" class="pyscript-editor" style="height: 40px;">def creer_pile():
+    """Crée une pile vide avec une liste vide"""
+    return ...
+
+def est_vide(p):
+    """Renvoie True si la pile p est vide; False si non"""
+    ...
+
+def empiler(p,e):
+    """Ajoute l'élément e au sommet de la pile p"""
+    ...
+
+def depiler(p):
+    """Renvoie le sommet de la pile p en le supprimant"""
+    ...</textarea><div id="pyscript-editor-0-output" class="pyscript-output"></div><div id="pyscript-editor-0-foot" class="pyscript-foot"></div></div>
 </div>
-<p>On peut <strong>implémenter</strong> une pile en Python avec la programmation orienté objet en créant une classe <strong>Pile</strong> qui regroupe regroupe les différentes méthodes qui réalisent l’interface d’une pile.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On peut <strong>implémenter</strong> une pile en Python avec la programmation orienté objet en créant une classe <code class="docutils literal notranslate"><span class="pre">Pile</span></code> qui regroupe les différentes méthodes réalisant l’interface d’une pile.</p>
+</div>
 <p>Les implémentations d’une pile peuvent proposer d’autres fonctions comme :</p>
 <ul class="simple">
 <li><p>la hauteur d’une pile (nombre d’éléments)</p></li>
@@ -460,12 +478,12 @@ l’interface reste la seule définition de cette structure.</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="ponctuation.html"
+       href="../index.html"
        title="page précédente">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">précédent</p>
-        <p class="prev-next-title">Activité</p>
+        <p class="prev-next-title">Les piles</p>
       </div>
     </a>
     <a class="right-next"

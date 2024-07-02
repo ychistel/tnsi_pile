@@ -1,14 +1,27 @@
 Les piles
-=========
+==========
 
-La **pile** est une structure de donnée qui mémorise des valeurs mais ne permet l'accès qu'à la dernière valeur ajoutée dans la pile. Cette dernière valeur, une fois retirée permet alors l'accès à la valeur suivante et ainsi de suite.
+Contenus
+-----------
 
-La **pile** n'existe pas en Python mais on peut y remédier assez facilement.
+-   Structures de données, interface et implémentation.
+-   Pile : structure linéaire.
+
+Capacités attendues
+--------------------
+
+-   Spécifier une structure de données par son interface.
+-   Distinguer interface et implémentation
+-   Écrire plusieurs implémentations d'une même structure de données.
+-   Distinguer des structures par le jeu des méthodes qui les caractérisent.
+-   Choisir une structure de données adaptées à la situation à modéliser.
    
 .. toctree::
-   :maxdepth: 1
-   
-   content/ponctuation.rst
-   content/pile.rst
-   content/exercice.rst
+    :maxdepth: 1
+    :hidden:
+
+    content/pile.rst
+    content/exercice.rst
+    content/ponctuation.rst
+    content/ep_pr_1.rst
 

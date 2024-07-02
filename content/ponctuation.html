@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="../_static/img/favicon-16x16.png" sizes="16x16" rel="icon" type="image/png">
     <link href="../_static/img/favicon-32x32.png" sizes="32x32" rel="icon" type="image/png">
-    <title>Activité &#8212; Documentation Documentation Sphinx </title>
+    <title>TP : Ponctuation &#8212; Documentation Documentation Sphinx </title>
   
   
   
@@ -53,8 +53,8 @@
     <link rel="canonical" href="https://ychistel.github.io/content/ponctuation.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="Cours" href="pile.html" />
-    <link rel="prev" title="Les piles" href="../index.html" />
+    <link rel="next" title="Exercice pratique" href="ep_pr_1.html" />
+    <link rel="prev" title="Exercices" href="exercice.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="fr"/>
   </head>
@@ -190,9 +190,10 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Activité</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pile.html">Cours</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pile.html">Structure de pile</a></li>
 <li class="toctree-l1"><a class="reference internal" href="exercice.html">Exercices</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">TP : Ponctuation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ep_pr_1.html">Exercice pratique</a></li>
 </ul>
 
     </div>
@@ -355,7 +356,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Activité</h1>
+    <h1>TP : Ponctuation</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -369,8 +370,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="activite">
-<h1>Activité<a class="headerlink" href="#activite" title="Lien vers cette rubrique">#</a></h1>
+  <section id="tp-ponctuation">
+<h1>TP : Ponctuation<a class="headerlink" href="#tp-ponctuation" title="Lien vers cette rubrique">#</a></h1>
 <p>On rencontre en informatique et en mathématiques des expressions contenant des <strong>ponctuations</strong> comme les parenthèses, les crochets, des accolades et même les guillemets (quotes).</p>
 <p>Par exemple, en python, les structures de données comme les listes ou les dictionnaires utilisent des crochets et des accolades.</p>
 <p>Comment vérifier que la ponctuation d’une expression est correcte ?</p>
@@ -383,8 +384,8 @@ document.write(`
 </ol>
 <p>Comment peut-on s’assurer que la ponctuation est correcte dans ces expressions ?</p>
 </li>
-<li><p>On considère que chaque expression est une chaine de caractères. Écrire en python la fonction <code class="docutils literal notranslate"><span class="pre">verifie</span></code> qui prend en paramètre une chaine de caractère et qui renvoie un tableau contenant toute la ponctuation de l’expression.</p>
-<p>Par exemple, si on applique le script au trois expressions ci-dessus, on obtient les tableaux:</p>
+<li><p>On considère que chaque expression est une chaine de caractères. Écrire en python la fonction <code class="docutils literal notranslate"><span class="pre">verifie</span></code> qui prend en paramètre une chaine de caractères et qui renvoie un tableau contenant toute la ponctuation de l’expression.</p>
+<p>Par exemple, si on applique le script aux trois expressions ci-dessus, on obtient les tableaux:</p>
 <ol class="loweralpha simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">['(',</span> <span class="pre">'(',</span> <span class="pre">')',</span> <span class="pre">')']</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">['(',</span> <span class="pre">')',</span> <span class="pre">'[',</span> <span class="pre">'(',</span> <span class="pre">')',</span> <span class="pre">'{',</span> <span class="pre">'}',</span> <span class="pre">']',</span> <span class="pre">'(',</span> <span class="pre">')']</span></code></p></li>
@@ -392,22 +393,9 @@ document.write(`
 </ol>
 </li>
 <li><p>Comment reconnaître que la ponctuation d’une expression est correcte en analysant les tableaux renvoyés par la fonction <code class="docutils literal notranslate"><span class="pre">verifie</span></code> ?</p></li>
-<li><p>Il existe une structure de données appelée <strong>pile</strong> qui est dite <strong>lifo</strong> pour <strong>last in, first out</strong> (dernier arrivé, premier sorti). L’accès aux valeurs qu’elle contient se fait uniquement sur la dernière valeur insérée appelée <strong>sommet</strong> de la pile. Il est impossible d’accéder à une valeur tant qu’elle n’est pas le sommet de la pile.</p>
-<p>L’interface d’une pile est la suivante:</p>
-<ul class="simple">
-<li><p><strong>creer_pile</strong> qui crée une pile vide;</p></li>
-<li><p><strong>empiler</strong> qui ajoute une valeur à la pile;</p></li>
-<li><p><strong>depiler</strong> qui retire le sommet de la pile;</p></li>
-<li><p><strong>est_vide</strong> qui renvoie un booléen vérifiant si la pile est vide ou non.</p></li>
-</ul>
+<li><p>Une pile est une structure qui convient très bien pour vérifier la ponctuation d’une expression.</p>
 <ol class="loweralpha simple">
-<li><p>Une liste python a-t-elle une structure de pile ? Justifier.</p></li>
-<li><p>Qu’elles sont les méthodes de listes python qui peuvent être utilisées pour qu’une liste soit traitée comme une pile ?</p></li>
-</ol>
-</li>
-<li><p>Une pile est une structure qui convient pour vérifier la ponctuation d’une expression.</p>
-<ol class="loweralpha simple">
-<li><p>Expliquer comment l’utilisation d’une pile répond au problème.</p></li>
+<li><p>Expliquer en quoi l’utilisation d’une pile répond au problème.</p></li>
 <li><p>Modifier la fonction <code class="docutils literal notranslate"><span class="pre">verifie</span></code> en utilisant une pile de façon à renvoyer un booléen qui affirme que l’expression est bien ponctuée ou non.</p></li>
 </ol>
 </li>
@@ -426,20 +414,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../index.html"
+       href="exercice.html"
        title="page précédente">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">précédent</p>
-        <p class="prev-next-title">Les piles</p>
+        <p class="prev-next-title">Exercices</p>
       </div>
     </a>
     <a class="right-next"
-       href="pile.html"
+       href="ep_pr_1.html"
        title="page suivante">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">suivant</p>
-        <p class="prev-next-title">Cours</p>
+        <p class="prev-next-title">Exercice pratique</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
