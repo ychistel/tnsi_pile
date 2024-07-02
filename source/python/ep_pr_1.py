@@ -25,7 +25,6 @@ class Pile:
         if not self.est_vide():
             return self.contenu.pop()
 
-
 def eval_expression(tab):
     p = Pile()
     for ... in tab:

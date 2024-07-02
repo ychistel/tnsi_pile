@@ -24,4 +24,5 @@ Pour cet exercice, on dispose d’une classe ``Pile`` qui implémente les métho
 
 Compléter le script de la fonction eval_expression qui reçoit en paramètre une liste python représentant la notation postfixe d'une expression arithmétique et qui renvoie sa valeur associée.
 
-.. literalinclude:: ../python/ep_pr_1.py
+.. pyscript:: 
+    :file: ../python/ep_pr_1.py
